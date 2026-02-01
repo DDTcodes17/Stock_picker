@@ -17,3 +17,15 @@ research_trending_companies:
     - find_trending_comapnies
   ourput_files: output/research_report.json
 
+pick_best_company:
+  description: >
+    Analyze the research findings and pick the best company for investment.
+    Send a push notification to the user with the decision and 1 sentence rationale.
+    Then respond with a detailed report on why you chose this company, and which companies were not selected.
+  expected_output: >
+    The best chosen company and why it was chosen, the companies that were not selected and why they were not selected.
+  agent: stock_picker
+  context:
+    -research_trending_companies
+  output_files: output/decision.md
+
